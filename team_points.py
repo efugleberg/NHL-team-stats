@@ -40,8 +40,16 @@ for row in stats:
         team_freq[team] += 1
     else:
         team_freq[team] = 1
+print(team_freq)
 
-print(team_freq.keys())
+def total_goals(year):
+    goals = 0
+    for name in stats:
+        if name[2] == year:
+            goals += float(name[11])
+    return goals
+
+print(total_goals("2018-19"))
 
 
 
